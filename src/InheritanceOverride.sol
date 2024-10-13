@@ -2,7 +2,7 @@
 pragma solidity ^0.8.13;
 
 contract A {
-    // foo() can be overridden by child contract -> focus on virtual
+    // foo() can be overridden by child contract
     function foo() public pure virtual returns (string memory) {
         return "A";
     }
@@ -14,7 +14,7 @@ contract A {
 
 // Inherit other contracts by using the keyword 'is'.
 contract B is A {
-    // Overrides A.foo() -> focus on override
+    // Overrides A.foo()
     function foo() public pure override returns (string memory) {
         return "B";
     }
